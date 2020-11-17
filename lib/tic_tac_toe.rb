@@ -1,4 +1,5 @@
 class TicTacToe
+  require "pry"
   attr_accessor :board
 
   def initialize(board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
@@ -59,6 +60,7 @@ def turn
     player = current_player
     move(index, player)
     display_board
+    binding.pry
   else
     turn
   end
